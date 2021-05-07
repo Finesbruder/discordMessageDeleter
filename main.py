@@ -30,7 +30,7 @@ class caesarBot:
       self.client.run(self.token)
 
    def deleteOldMessagesFromTextChannel(self, channel):
-      if channel is None: return
+      if not channel: return
 
       messages = await channel.history().flatten()
       for msg in messages:
