@@ -1,6 +1,4 @@
-import discord, asyncio
-import os
-import datetime
+import discord, os, datetime
 from discord.ext import tasks
 from dotenv import load_dotenv
 
