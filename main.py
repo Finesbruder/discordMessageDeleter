@@ -15,7 +15,7 @@ class caesarBot:
    def run(self):
       @self.client.event
       async def on_ready():
-         self.deleteEveryOldMessage()
+         print("Caesar will burn the library")
 
       @tasks.loop(hours=self.deleteFrequency)
       async def cleanHistory():
