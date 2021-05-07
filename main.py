@@ -34,8 +34,8 @@ class caesarBot:
 
       messages = await channel.history().flatten()
       for msg in messages:
-         deletedAfter = datetime.timedelta(days=self.daysUntilDelete)
-         if (datetime.datetime.now() - msg.created_at > deletedAfter):
+         maxMessageAliveTimeSpan = datetime.timedelta(days=self.daysUntilDelete)
+         if (datetime.datetime.now() - msg.created_at > maxMessageAliveTimeSpan):
             await msg.delete()
 
    def getEveryTextChannel(self):
